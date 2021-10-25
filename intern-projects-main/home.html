@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+           box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        header {
+            height: 60px;
+            background-color: #20232a;
+            padding: 20px 10px;
+        }
+        ul {
+            list-style: none;
+        }
+        #ul li {
+            display: block;
+        }
+        #menu a {
+            display: block;
+            color: white;
+            float: right;
+            text-align: center;
+            padding: 10px;
+            margin-top: -110px;
+            padding: 50px;
+            text-decoration: none;
+            font-size: 19px;
+            border-radius: 6px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        #logo {
+            font-size: 17px;
+            font-weight: bold;
+            color: #61dafb;
+            margin-top: -35px;
+            padding-left: 20px;
+            font-family: cursive
+        }
+        #menu a:hover {
+            color: #61dafb;
+            border-bottom: 2px  solid #61dafb;
+        }
+        #menu a.active {
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+        }
+        
+    </style>
+ </head>
+  <body>
+    <div class="main">
+        <header>
+            <!-- logo and navigation bar -->
+            <div id="top-header">
+
+                <!-- logo -->
+                <div id="logo">
+                   <h1>LearnTech</h1>
+                </div>
+
+                <!-- navigation menu -->
+                <nav>
+                    <ul id="menu">
+                        <li class="active"><a href="#">Certificate</a></li>
+                        <li><a href="#">Lecturer Notes</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <div class="courses">
+            <h3 style="text-align: center; color: #20232a; font-size: 30px; font-family: 'Times New Roman', Times, serif; padding-top: 30px;">Top courses available</h3>
+            <ul id="course_list">
+                <li>
+                    <a href="#"><img src="DSA.png" width="300" height="200">Data Structures and Algorithms</a>
+                </li>
+                <li>
+                    <a href="#"><img>Introduction to python</a>
+                </li>
+                <li>
+                    <a href="#">Web Development</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    
+  </body>
+</html>
