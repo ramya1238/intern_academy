@@ -9,87 +9,86 @@
         * {
            box-sizing: border-box;
         }
-        body{
-            margin: 0;
+        html {
+             background: url(cover.jpg) no-repeat center; 
+             height: 100%;
+             background-position: center;
+             background-size: cover;
+        }
+        body {
+            margin: 0; 
         }
         header {
-            height: 60px;
-            background-color: #20232a;
-            padding: 20px 10px;
+            background: transparent;
+            height:60px;
+            background-color:rgba(32, 32, 32, 0.5);
+            padding: 20px;
+            position: relative;
+        }
+        #logo {
+            height: 50px;
+            width: 50px;
+            margin-top: -3px;
         }
         ul {
             list-style: none;
-        }
-        #ul li {
-            display: block;
-        }
-        #menu a {
-            display: block;
-            color: white;
-            float: right;
-            text-align: center;
-            padding: 10px;
-            margin-top: -110px;
-            padding: 50px;
+            margin-left: 37em;
+        } 
+        li >a {
             text-decoration: none;
-            font-size: 19px;
-            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            color: aliceblue;
+            border-radius: 30px;
+            margin: 15px;
+            padding: 7px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
         }
-        #logo {
-            font-size: 17px;
-            font-weight: bold;
-            color: #61dafb;
-            margin-top: -35px;
-            padding-left: 20px;
-            font-family: cursive
+        .flex-container {
+            display: flex;
         }
-        #menu a:hover {
-            color: #61dafb;
-            border-bottom: 2px  solid #61dafb;
+        ul > li {
+            display: inline;
         }
-        #menu a.active {
+        a:hover {
+            color: black;
+            background-color: aliceblue;
+        }
+        a.active {
             color: #61dafb;
             border-bottom: 2px solid #61dafb;
-        }
+        } 
+
+        /* course styling */
+       .course-container img {
+           height: 160px;
+           width: 200px;
+       }
         
     </style>
  </head>
   <body>
-    <div class="main">
+    <div class="home">
+        <!-- header -->
         <header>
-            <!-- logo and navigation bar -->
-            <div id="top-header">
-
+            <div class="flex-container" style="margin-top: -12px;">
                 <!-- logo -->
-                <div id="logo">
-                   <h1>LearnTech</h1>
-                </div>
-
-                <!-- navigation menu -->
-                <nav>
-                    <ul id="menu">
-                        <li class="active"><a href="#">Certificate</a></li>
-                        <li><a href="#">Lecturer Notes</a></li>
-                        <li><a href="#">Home</a></li>
-                    </ul>
-                </nav>
-
+                <img src="logo.jpeg" alt="LearnTech" id="logo">
+                
+                   <!-- navigation bar -->
+                   <ul>
+                       <li><a href="#">About us</a></li>
+                       <li><a href="#">Our Team</a></li>
+                       <li><a href="#">Contact us</a></li>
+                       <li><a href="#">Sign up</a></li>
+                   </ul>
             </div>
         </header>
-
-        <div class="courses">
-            <h3 style="text-align: center; color: #20232a; font-size: 30px; font-family: 'Times New Roman', Times, serif; padding-top: 30px;">Top courses available</h3>
-            <ul id="course_list">
-                <li>
-                    <a href="#"><img src="DSA.png" width="300" height="200">Data Structures and Algorithms</a>
-                </li>
-                <li>
-                    <a href="#"><img>Introduction to python</a>
-                </li>
-                <li>
-                    <a href="#">Web Development</a>
-                </li>
+        
+        <!-- courses -->
+        <div class="course-container">
+            <ul>
+                <li><a href="#"><img src="DSA.png" alt="dsa"></a></li>
             </ul>
         </div>
 
