@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
     <title>Home</title>
     <style>
         * {
            box-sizing: border-box;
         }
-        html {
+        .header-main {
              background: url(cover.jpg) no-repeat center; 
-             height: 100%;
-             background-position: center;
+             width: 100%;
+             height: 700px;
+             background-position: center; 
              background-size: cover;
         }
         body {
@@ -21,14 +25,16 @@
         header {
             background: transparent;
             height:60px;
+            width: 100%;
             background-color:rgba(32, 32, 32, 0.5);
             padding: 20px;
-            position: relative;
+            position: fixed;
         }
         #logo {
             height: 50px;
             width: 50px;
             margin-top: -3px;
+            border-radius: 190px;
         }
         ul {
             list-style: none;
@@ -50,48 +56,292 @@
         ul > li {
             display: inline;
         }
-        a:hover {
+        header a:hover {
             color: black;
             background-color: aliceblue;
         }
-        a.active {
+        header a.active {
             color: #61dafb;
             border-bottom: 2px solid #61dafb;
         } 
 
         /* course styling */
-       .course-container img {
-           height: 160px;
-           width: 200px;
-       }
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size: 40px; 
+            font-weight: 900;
+        }
+        .course-container > a{
+           margin: 20px 20px 150px 150px;
+           text-decoration: none;
+        } 
+        .course-container img {
+            height: 200px;
+            width: 300px;
+            border-radius: 3px;
+        }
+        .course-container a {
+            background-color: beige;
+            height: fit-content;
+            width: 350px;
+            padding: 25px;
+            border:2px solid #fff;
+           box-shadow: 10px 10px 5px #ccc;
+           border-radius: 20px;
+        }
+        .course-container a:hover {
+            transform: scale(1.1);
+        }
+        h2 {
+           color: teal;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           font-weight: 100px;
+        }
+        h4 {
+            color: cadetblue;
+            font-size: 12px;
+            
+        }
+        .rate {
+            font-size: 18px;
+            color: chocolate;
+            font-weight: 900;
+        }
+        span {
+            color: orange;
+        }
+        .checked {
+            color: orange;
+        }
+        i {
+            font-size: 25px;
+            color: rgb(10, 100, 100);
+        }
+        .about-rate {
+            background-color: rgb(173, 201, 173);
+            padding: 5px;
+            height: fit-content;
+            width: fit-content;
+            color: brown;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 2px;
+        }
+
+        /* team styling */
+        .team-container img {
+            height: 200px;
+            width: 200px;
+            margin: 40px;
+            /* margin: 20px 20px 300px 170px; */
+            border-radius: 190px;
+            border:2px solid #fff;
+            
+        }
+        .team-container div {
+            margin: 20px 20px 200px 100px;
+            width: 300px;
+            height: 400px;
+            background-color: #20232a;
+            box-shadow: 10px 10px 5px #fff;
+           border-radius: 20px;
+        }
         
+        .mem {
+            font-size: 30px;
+            margin: -10px 0 18px 20px;
+            color: #61dafb;
+        }
+        .mem-text1{
+            font-size: 19px;
+            font-weight: lighter;
+        }
+        .mem-text {
+            margin-left: 10px;
+            
+        }
+
+        /* footer styling */
+        footer {
+            background-image: url(footer.jpg);
+            width: 100%;
+            height: 500px;
+            background-repeat: no-repeat; 
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .foot-container {
+            height: fit-content;
+        }
+        
+        /* social icons */
+        .social-icons a {
+            background-color: aliceblue;
+            height: fit-content;
+            width: fit-content;
+        }
+        .social-icons a:hover {
+            background-color: rgb(163, 180, 194);
+        }
+
+
+       
     </style>
  </head>
   <body>
     <div class="home">
-        <!-- header -->
-        <header>
+       <div class="header-main">
+           
+         <!-- header -->
+          <header>
             <div class="flex-container" style="margin-top: -12px;">
                 <!-- logo -->
                 <img src="logo.jpeg" alt="LearnTech" id="logo">
                 
                    <!-- navigation bar -->
                    <ul>
-                       <li><a href="#">About us</a></li>
-                       <li><a href="#">Our Team</a></li>
-                       <li><a href="#">Contact us</a></li>
-                       <li><a href="#">Sign up</a></li>
+                       <li><a href="#explore">Explore</a></li>
+                       <li><a href="#team">Our Team</a></li>
+                       <li><a href="#footer">Contact us</a></li>
+                       <li><a href="login.html" style="margin-left: 100px; background-color: white; color: black;">Sign up</a></li>
                    </ul>
             </div>
-        </header>
+          </header>
+       </div>
         
         <!-- courses -->
-        <div class="course-container">
-            <ul>
-                <li><a href="#"><img src="DSA.png" alt="dsa"></a></li>
-            </ul>
+        <div id="explore">
+        <p style="padding-left: 360px;">
+            Expand your career opportunities
+        </p>
+        
+        <div class="course-container" style="height: 500px; margin: 20px; border-radius: 30px; display: flex;" >
+            
+            <a href="#"><img src="DSA.png" alt="dsa">
+                <h2>Data Structures</h2>
+                <h4 class="mentor" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Daniel Gakwaya</h4>
+                <div class="rate-container">
+                    <h4 class="rate" style="display: flex;">3.9 &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star-half-full" style="color: orange;"></span> &nbsp
+                        <span class="fa fa-star-o"></span>
+                    </h4>
+                </div>
+                <i class="fa fa-rupee"> 5,499</i>
+                <h4 class="about-rate">Bestseller</h4>
+            </a>
+            <a href="#" style="color: black;"><img src="webdev.jpg" alt="wd">
+                <h2>Web Development</h2>
+                <h4 class="mentor" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Graw Hill</h4>
+                <div class="rate-container">
+                    <h4 class="rate" style="display: flex;">4.7 &nbsp
+                        <span class="fa fa-star checked" ></span> &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star checked"></span> &nbsp
+                        <span class="fa fa-star-half-full" style="color: orange;"></span>
+                    </h4>
+                </div>
+                <i class="fa fa-rupee"> 3,500</i>
+                <h4 class="about-rate">Highest rated</h4>
+            </a>
+          
         </div>
 
+        <!-- our team -->
+        <div id="team">
+        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px; font-weight: 900; margin-left: 40%; margin-top: 100px;" >
+            We built together
+        </p>
+
+        <div class="team-container"  style="height: 440px; margin-top: 50px; border-radius: 10px; display: flex; background-color: #61dafb; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >
+            
+                <div class="mem" alt="ramya">
+                    <img src="team imgs/ramya.jpeg" >
+                    <t class="mem-text">
+                        Hi, I'm Ramya,<br>&nbsp &nbsp
+                        <sp class="mem-text1">a <b>creative developer.</b></sp>
+                    </t>
+                    
+
+                </div>
+                <div class="mem" alt="ujju">
+                    <img src="team imgs/ujju.jpeg">
+                    <t class="mem-text">
+                        Hi, I'm Ujwala,<br>&nbsp &nbsp
+                        <sp class="mem-text1">a <b>creative developer.</b></sp>
+                    </t>
+                    
+                </div>
+                <div class="mem" alt="sam">
+                    <img src="team imgs/sam.jpeg">
+                    <t class="mem-text">
+                        Hi, I'm Sameera,<br>&nbsp &nbsp
+                        <sp class="mem-text1">a <b>creative developer</b></sp>
+                    </t>
+                </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <div style="margin-top: 70px; display: flex; height: 400px;" class="foot_contaier" > 
+                <!-- about -->
+                <div class="about" style="font-size: 19px; color: rgb(175, 171, 171); margin-left: 50px; ">
+                    <h6 style="font-size: 20px; color: white; margin-top: 100px; width: fit-content;">
+                        ABOUT
+                    </h6>
+                        LearnTech <i style="font-size: 20px; color: #ccc;">CODE WANTS TO BE SIMPLE </i> is an initiative to <br> 
+                        help the upcoming programmers with the code. LearnTech focuses on <br>
+                        providing the most efficient code or snippets as the code wants to <br>
+                        be simple. We will help programmers build up concepts in different <br>
+                        programming languages that include C, C++, Java, HTML, CSS, <br>
+                        Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
+                </div>
+                <!-- categories -->
+                    <div class="categories" style="font-size: 20px; color: #ccc; margin: 3px 20px 150px 200px;">
+                        <h6 style="font-size: 20px; color: white; margin-top: 100px; width: fit-content;">
+                            CATEGORIES
+                        </h6>
+                        c <br> Java <br> PHP <br> bootstrap <br> Algorithms 
+                    </div>
+                <!-- quick links -->
+                    <div class="quick-links"  style="font-size: 20px; color: #ccc; margin: 3px 20px 150px 200px;">
+                        <h6 style="font-size: 20px; color: white; margin-top: 100px; width: fit-content;">
+                            QUICK LINKS
+                        </h6>
+                        About Us <br> Contact Us <br> Privacy Policy <br> Sitemap
+                    </div>
+                
+
+            </div>
+
+            <div style="border-bottom: 2px solid grey; margin-right: 50px; margin-left: 50px; "></div>
+
+            <!-- copyrights and social media -->
+            <div class="copyrights-socialmedia" style="display: flex;">
+                <div>
+                    <p style="font-size: 15px; color: gray; margin-left: 50px;">
+                        Copyright &copy; 2017 All Rights Reserved by LearnTech.
+                    </p>
+                </div>
+
+                <!-- social media -->
+                <div class="social media">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+               
+        </footer>
+                
+        
     </div>
     
   </body>
