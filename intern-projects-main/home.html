@@ -130,10 +130,10 @@
         /* team styling */
         .team-container img {
             height: 200px;
-            width: 200px;
+            width: 190px;
             margin: 40px;
             /* margin: 20px 20px 300px 170px; */
-            border-radius: 190px;
+            border-radius: 200px;
             border:2px solid #fff;
             
         }
@@ -183,7 +183,25 @@
             background-color: rgb(163, 180, 194);
         }
 
-
+        /* vedio preview */
+        .vedio-preview-container div {
+            align-items: center;
+            margin-left: -12px;
+            width: fit-content;
+            height: fit-content;
+            
+        }
+        .vedio-preview-container  video {
+            padding: 20px;
+            
+        }
+        h5 {
+            font-size: 20px;
+            margin-top: -5px;
+            padding-left: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #fff;
+        }
        
     </style>
  </head>
@@ -249,8 +267,31 @@
           
         </div>
 
+        <!-- vedio preview -->
+        <div id="vedio">
+            <p
+                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px; font-weight: 900; margin-left: 40%; margin-top: 100px;">
+                Vedio preview
+            </p>
+        
+            <div class="vedio-preview-container" style="display: flex; height: fit-content; width: 100%; background-color: #333333; border-radius: 5px;">
+                <div>
+                    <video src="dsa vedios/Arrays in Data Structure.mp4" controls width="fit-content" height="fit-content"></video>
+                    <h5>Arrays in Data Structure</h5>
+                </div>
+                <div>
+                    <video src="dsa vedios/Binary Search Tree in Data Structure.mp4" controls width="fit-content" height="fit-content"></video>
+                    <h5>Binary Search Tree in Data Structure</h5>
+                </div>
+                <div>
+                    <video src="webdev vedios/Javascript Tutorial.mp4" controls width="fit-content" height="fit-content"></video>
+                    <h5>Javascript Tutorial</h5>
+                </div>
+            </div>
+        </div>
+
         <!-- our team -->
-        <div id="team">
+        <div id="team" style="margin-top: -30px;">
         <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 40px; font-weight: 900; margin-left: 40%; margin-top: 100px;" >
             We built together
         </p>
